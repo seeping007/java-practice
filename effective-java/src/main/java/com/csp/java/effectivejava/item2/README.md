@@ -2,7 +2,7 @@
 
 ### 1. Telescoping constructor pattern
 
-```
+```java
 public class NutritionFacts { // does not scale well
     private final int servingSize;
     private final int servings;
@@ -34,7 +34,7 @@ NutritionFacts cocaCola = new NutritionFacts(240, 8, 100, 0, 35);
 
 ### 2. JavaBeans pattern
 
-```
+```java
 // allows inconsistency, mandates mutability
 public class NutritionFacts {
     // Parameters initialized to default values (if any)
@@ -54,6 +54,7 @@ public class NutritionFacts {
     public void setFat(int val) {fat=val;}
     public void setSodium(int val) { sodium = val; }
     public void setCarbohydrate(int val) { carbohydrate = val; }
+}
 ```
 
 ### 3. Builder pattern
