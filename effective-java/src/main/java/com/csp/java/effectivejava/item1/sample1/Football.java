@@ -1,4 +1,4 @@
-package com.csp.java.effectivejava.item1;
+package com.csp.java.effectivejava.item1.sample1;
 
 /**
  * @author CSP
