@@ -7,9 +7,9 @@
 ```java
 // Noninstantiable utility class
 public class UtilityClass {
-	// Suppress default constructor for noninstantiability
-	private UtilityClass() {
-		throw new AssertionError(); // isn’t strictly required
-	}
+    // Suppress default constructor for noninstantiability
+    private UtilityClass() {
+        throw new AssertionError(); // isn’t strictly required
+    }
 }
 ```

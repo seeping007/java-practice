@@ -7,9 +7,9 @@ Singletons typically represent either a stateless object such as a function (Ite
 ```java
 // Singleton with public final field
 public class Elvis {
-  public static final Elvis INSTANCE = new Elvis();
-	private Elvis() {}
-	public void leaveTheBuilding() {}
+    public static final Elvis INSTANCE = new Elvis();
+    private Elvis() {}
+    public void leaveTheBuilding() {}
 }
 ```
 
@@ -22,10 +22,10 @@ public class Elvis {
 ```java
 // Singleton with static factory
 public class Elvis {
-	private static final Elvis INSTANCE = new Elvis();
-	private Elvis() {}
-	public static Elvis getInstance() { return INSTANCE; }
-	public void leaveTheBuilding() {}
+    private static final Elvis INSTANCE = new Elvis();
+    private Elvis() {}
+    public static Elvis getInstance() { return INSTANCE; }
+    public void leaveTheBuilding() {}
 }
 ```
 
@@ -42,9 +42,9 @@ public class Elvis {
 ```java
 // readResolve method to preserve singleton property
 private Object readResolve() {
-	// Return the one true Elvis and let the garbage collector
-	// take care of the Elvis impersonator.
-	return INSTANCE;
+    // Return the one true Elvis and let the garbage collector
+    // take care of the Elvis impersonator.
+    return INSTANCE;
 }
 ```
 
@@ -53,8 +53,8 @@ private Object readResolve() {
 ```java
 // Enum singleton - the preferred approach
 public enum Elvis {
-	INSTANCE;
-	public void leaveTheBuilding() {}
+    INSTANCE;
+    public void leaveTheBuilding() {}
 }
 ```
 
