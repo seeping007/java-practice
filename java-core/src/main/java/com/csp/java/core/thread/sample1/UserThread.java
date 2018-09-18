@@ -1,4 +1,4 @@
-package com.csp.java.concurrency.sample1;
+package com.csp.java.core.thread.sample1;
 
 /**
  * @author CSP
@@ -6,22 +6,23 @@ package com.csp.java.concurrency.sample1;
  */
 public class UserThread extends Thread {
 
-    private final Gate gate;
+    private final Bridge bridge;
 
     private final String name;
 
     private final String address;
 
-    UserThread(Gate gate, String name, String address) {
-        this.gate = gate;
+    UserThread(Bridge bridge, String name, String address) {
+        this.bridge = bridge;
         this.name = name;
         this.address = address;
     }
 
+    @Override
     public void run() {
-        System.out.println(name + " BEGIN");
+        System.out.println(name + " begin");
         while (true) {
-            gate.pass(name, address);
+            bridge.pass(name, address);
         }
     }
 }
