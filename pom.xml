@@ -12,6 +12,7 @@
     <modules>
         <module>java-core</module>
         <module>effective-java</module>
+        <module>jdk17</module>
     </modules>
 
 </project>
